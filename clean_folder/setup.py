@@ -9,7 +9,7 @@ setup(
     author_email='33demagoit@gmail.com',
     license='MIT',
     packages=find_namespace_packages(),
-    install_requires=['sys', 'shutil', 'pathlib'],
+    install_requires=[],
     entry_points={'console_scripts': [
         'clean_folder = clean_folder.clean:main']}
 )

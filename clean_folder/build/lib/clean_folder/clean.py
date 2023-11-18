@@ -61,10 +61,8 @@ def normalize_dir(dest_dir):
     for item in dest_dir.iterdir():
         if item.is_dir():
             sub_dir = item.parent.joinpath(normalize(item.name))
-
-            if sub_dir != item:
+            if not item.exists():
                 item.rename(sub_dir)
-               
             normalize_dir(sub_dir)
         else:
             dest_file_norm = item.parent.joinpath(normalize(item.stem) + item.suffix)
@@ -164,7 +162,7 @@ def sort_files(work_dir, target_dir):
 
 
 def main():
-    print(sys.argv[1])
+    # print(sys.argv[1])
     if not len(sys.argv)>1:
         print(f'Usage: {sys.argv[0]} <path to dir>')
         sys.exit(1)
