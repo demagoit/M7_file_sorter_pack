@@ -164,7 +164,7 @@ def sort_files(work_dir, target_dir):
 
 
 def main():
-    print(sys.argv[1])
+    # print(sys.argv[1])
     if not len(sys.argv)>1:
         print(f'Usage: {sys.argv[0]} <path to dir>')
         sys.exit(1)
